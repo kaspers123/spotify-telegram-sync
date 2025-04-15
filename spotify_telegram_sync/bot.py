@@ -661,6 +661,7 @@ if __name__ == "__main__":
     telegram_channel = clients["telegram_channel"]
     time.sleep(1)
     telegram_me = client.loop.run_until_complete(client.get_input_entity("me"))
+    client.loop.run_until_complete(client.send_message("me", "✅ Botten är igång och kan skicka till 'me'!"))
 
     tasks = []
     if constants.UPDATE_BIOS and constants.UPDATE_PLAYLIST:
